@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: white;
+}
+
+.main-img {
+ max-width: 20%;
+ height: auto;
+  position: absolute;
+  position: -webkit-sticky;
+  position: sticky;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+.site-input-group-wrapper {
+width: 700px;
+
+}
+
+#header-team {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h1 {
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p {
+  text-align: center;
+  font-size: 16px;
+}
+/* login form styling from ant */
+.form-border {
+  margin: 20px;
+  padding: 100px;
+  border: 2px 2px 2px 2px;
+  border-color: black;
+  border-style: dashed;  
+}
+
+.align {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.dropdown{
+  color:white;
+  font-size: 20px;
+}
+.login-form {
+  max-width: 500px;
+}
+.login-form-forgot {
+  float: right;
+}
+.ant-col-rtl .login-form-forgot {
+  float: left;
+}
+.login-form-button {
+  width: 100%;
+}
+
+/* segmented footer */
+.sc-example {
+  color: rgb(123, 48, 167);
+  font-size: 14px;
+
+    margin: 700px;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  
+}
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+.headshot {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 20%;
+}
+
+.nav-logo img{
+  position: absolute;
+  justify-content: flex-end;
+  max-height: 125px;
+}
+.content-inside {
+  padding: 20px;
+  padding-bottom: 50px;
+  color: white;
+}
+.footer {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0px;
+  position: fixed;
+  width: 100%;
+  background-color: #4b5ba2;
+  color: white;
+  text-align: center;
+  height: 65px;
+  border-top: 20px black;
+  margin-top: 10px;
+  
+}
+
+/* event viewer styling */
+
+.eventView {
+  background-color:#4b5ba2b4;
+  scrollbar-color: white;
+  scrollbar-base-color: white;
+  top: 10%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  width: 50%;
+  align-content: center;
+  margin: auto;
+  opacity: 0.9;  
+}
+
+.code-box-demo {
+  scrollbar-base-color: white;
+}
+.config-provider {
+  font-size: inherit;
+  margin: 16px 0 8px 0;
+  scrollbar-base-color: white;
+}
+

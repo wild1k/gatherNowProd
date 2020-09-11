@@ -1,0 +1,52 @@
+/* user profile information */
+.userStyle {
+
+    width: 20%;
+  }
+
+
+  .center {
+    justify-content: center;
+  }
+
+.size {
+  width: 50%;
+  display: "flex";
+  justify-content: "center";
+  align-items: "center";
+  margin-bottom: 30px;
+  }
+
+  .bioCont {
+    margin-bottom: 165px;
+  }
+
+.bottomMargin {
+  margin-bottom: 30px;
+}
+
+.cardCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+
+
+
+
+
+  /* user pic upload */
+
+  .avatar-uploader > .ant-upload {
+    width: 250px;
+    height: 250px;
+
+  }
+
+  /* styles the myaccount container */ 
+.profileStyle {
+  justify-content: space-around;
+ 
+}

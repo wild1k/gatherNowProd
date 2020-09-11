@@ -12,20 +12,20 @@ import "../index";
 
 export default function Home() {
     return (
-        
-        <div>
+        <>
+         <p id="header-team">Welcome to GatherNow</p>
             <ImageRow/>
-            <p id="header-team">Welcome to GatherNow</p>
             {/* <Select/> */}
 
-            <p className="selectCategory">Select an event category below to get started:
+            <p className="selectCategory">Select an event category below to get started: </p>
                 <PickerView />
                 {/* <Cards></Cards> */}
             <button/>
-                Remember to wear a mask. Save lives.
-            </p>
+               <p> Remember to wear a mask. Save lives.</p>
+           <>
             <img class="logo" alt="" src={Logo}/>
-            
-        </div>
-    );
+            </>
+        </>
+    )
 }
+

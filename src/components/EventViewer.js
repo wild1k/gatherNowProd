@@ -56,7 +56,7 @@ export default class PickerViewer extends React.Component {
   render() {
     return (
 
-      <div className="eventView scroller container code-box-demo">
+      <div className="eventView container code-box-demo">
         <PickerView className="config-provider" style={style} data={availEvents}
           onChange={this.onChange}
           value={this.state.value}

@@ -16,15 +16,16 @@ export default function Home() {
          <p id="header-team">Welcome to GatherNow</p>
             <ImageRow/>
             {/* <Select/> */}
-
+            <div>
             <p className="selectCategory">Select an event category below to get started: </p>
                 <PickerView />
                 {/* <Cards></Cards> */}
-            <button/>
+            <button>Submit</button>
+            </div>
                <p> Remember to wear a mask. Save lives.</p>
-           <>
-            <img class="logo" alt="" src={Logo}/>
-            </>
+           <div className="bottomMargin">
+            <img class="logo" alt="gatherNow Icon" src={Logo}/>
+            </div>
         </>
     )
 }

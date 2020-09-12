@@ -8,6 +8,12 @@ body {
   background-color: white;
 }
 
+/* making the logo on the home page off the bottom */
+.bottomMargin {
+  margin-bottom: 900px;
+}
+
+
 .main-img {
  max-width: 20%;
  height: auto;
@@ -116,7 +122,8 @@ html, body {
   text-align: center;
   height: 65px;
   border-top: 20px black;
-  margin-top: 10px;
+  margin-top: 400px;
+ 
   
 }
 

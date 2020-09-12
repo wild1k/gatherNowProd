@@ -3,7 +3,7 @@ import API from '../../utils/API';
 import "antd/dist/antd.css";
 import "./index.css";
 import { Card, Button, Col, Space, Divider, Row } from "antd";
-import { WhiteSpace } from "antd-mobile";
+// import { WhiteSpace } from "antd-mobile";
 
 export default function EventCard() {
 

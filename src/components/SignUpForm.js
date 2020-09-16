@@ -111,7 +111,7 @@ function SignUpForm() {
           </Form.Item>
 
           <Form.Item>
-            <TextArea rows={4} maxLength={200} placeholder="User Bio"
+            <TextArea rows={4} maxLength={255} placeholder="User Bio"
               name="bio"
               value={SignUpFormData.bio}
               onChange={SignUpInputChange}

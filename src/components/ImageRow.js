@@ -8,11 +8,11 @@ import Drinks from './../utils/Images/drinks.jpg'
 const ImageRow = () =>{
     return (
         <div>
-        <img class="main-img" alt="" src={Kayaking}/>
-        <img class="main-img" alt="" src={Food}/>
-        <img class="main-img" alt="" src={Bonfire}/>
-        <img class="main-img" alt="" src={Drinks}/>
-        <img class="main-img" alt="" src={HorseRiding}/>
+        <img className="main-img" alt="kayaking" src={Kayaking}/>
+        <img className="main-img" alt="food" src={Food}/>
+        <img className="main-img" alt="bonfire" src={Bonfire}/>
+        <img className="main-img" alt="drinks" src={Drinks}/>
+        <img className="main-img" alt="horseback riding" src={HorseRiding}/>
         </div>
     );
     };

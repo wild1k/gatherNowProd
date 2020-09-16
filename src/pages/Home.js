@@ -18,13 +18,15 @@ export default function Home() {
             {/* <Select/> */}
             <div>
             <p className="selectCategory">Select an event category below to get started: </p>
+            <>
                 <PickerView />
                 {/* <Cards></Cards> */}
-            <button>Submit</button>
+        
+            </>
             </div>
                <p> Remember to wear a mask. Save lives.</p>
            <div className="bottomMargin">
-            <img class="logo" alt="gatherNow Icon" src={Logo}/>
+            <img className="logo" alt="gatherNow Icon" src={Logo}/>
             </div>
         </>
     )

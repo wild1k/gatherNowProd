@@ -3,15 +3,14 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import UserInfo from './components/UserProfile/UserProfile';
 
 
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root', 'container')
+  <App key={UserInfo}/>,
+document.getElementById('root', 'Container')
 );
 
 // If you want your app to work offline and load faster, you can change

@@ -1,46 +1,44 @@
-
-import React from 'react';
-import { PickerView } from 'antd-mobile';
+import React from "react";
+import { PickerView, Button } from "antd-mobile";
 
 import "../index.css";
 
 const availEvents = [
   [
     {
-      label: 'Active', 
-      value: 'active',
+      label: "Active",
+      value: "active",
     },
     {
-      label: 'Aquatic',
-      value: 'water',
+      label: "Aquatic",
+      value: "water",
     },
     {
-      label: 'Indoors',
-      value: 'sedentary',
+      label: "Indoors",
+      value: "sedentary",
     },
     {
-      label: 'Sporting Events',
-      value: 'sports'
+      label: "Sporting Events",
+      value: "sports",
     },
     {
-      label: 'Shopping',
-      value: 'shopping'
+      label: "Shopping",
+      value: "shopping",
     },
     {
-      label: 'Social',
-      value: 'social',
+      label: "Social",
+      value: "social",
     },
     {
-      label: 'Urban',
-      value: 'drinking',
+      label: "Urban",
+      value: "drinking",
     },
     {
-      label: 'Virtual',
-      value: 'virtual',
+      label: "Virtual",
+      value: "virtual",
     },
   ],
 ];
-
 
 const style = { width: 10 };
 
@@ -52,16 +50,20 @@ export default class PickerViewer extends React.Component {
     this.setState({
       value,
     });
-  }
+  };
   render() {
     return (
-
-      <div className="eventView container code-box-demo">
-        <PickerView className="config-provider" style={style} data={availEvents}
+      <div className="eventView  code-box-demo">
+        <PickerView
+          className="config-provider "
+          style={style}
+          data={availEvents}
           onChange={this.onChange}
           value={this.state.value}
-          cascade={false}>
-        </PickerView>
+          cascade={false}
+        ></PickerView>
+
+        <Button>Submit</Button>
       </div>
     );
   }

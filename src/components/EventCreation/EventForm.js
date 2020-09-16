@@ -31,10 +31,10 @@ const styles = {
       meeting_spot: "",
       num_of_attendees: "",
       min_age:"",
-      additional_info:"" 
+      additional_info:""
 
     })
-  
+
     const CreateEventInputChange = event => {
       const { name, value } = event.target;
       setCreateEventFormData({
@@ -56,7 +56,7 @@ const styles = {
           meeting_spot: "",
           num_of_attendees: "",
           min_age: "",
-          additional_info: "" 
+          additional_info: ""
         })
       }).catch(err => {
         alert("Post Create Failed")

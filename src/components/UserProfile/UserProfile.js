@@ -3,65 +3,62 @@ import Avatar from "./ProfilePic";
 import { Descriptions, Card, Row, Col } from "antd";
 import "./index.css";
 
-
-
-
-
-
-
 function UserInfo(props) {
   return (
-    <>
-
-      <div className="cardCenter" >
-        <Card className="size">
+ 
+      <div className="cardCenter">   
+    
+        <Card >  
+          {props.currentUser ? 
           <Row justify="start" align="top">
-            <Col className="userStyle">
+            <Col>
               <Avatar />
-              <Row>
-                
-                  <Card >
-                  {props.currentUser ?  
-                    <Descriptions className="userStyle">
-                      <Descriptions.Item label="Name">
+                <Card >
+                 
+                    <Descriptions>
+                      <Descriptions.Item label="First">
                         {props.currentUser.first_name}
                       </Descriptions.Item>
+                      <Descriptions.Item label="Last">
+                        {props.currentUser.last_name}
+                      </Descriptions.Item>
                     </Descriptions>
-                    : null}
-                  </Card>
-                  
-              </Row>
-            </Col>
-            <Col className="userStyle">
-              
+            
+                </Card>
                 <Card>
-                {props.currentUser ?  
+               
                   <Descriptions>
-                    <Descriptions.Item label="Age" span={5}>
+                    <Descriptions.Item label="Age">
                       {props.currentUser.age}
                     </Descriptions.Item>
-                    <Descriptions.Item label="Email" >
-                      {/* {props.currentUser.email} */}
+                    <Descriptions.Item label="Email">
+                      {props.currentUser.email}
                     </Descriptions.Item>
                   </Descriptions>
-                   : null} 
-                </Card>
               
-              {props.currentUser ?
+              </Card>
+
+  </Col>
+<Row>
+  <Col>
                 <Card>
-                  <Descriptions className='bioCont'>
-                    <Descriptions.Item label="Bio" >
+                   
+                  <Descriptions className="bioCont">
+                    <Descriptions.Item label="Bio">
                       {props.currentUser.bio}
                     </Descriptions.Item>
                   </Descriptions>
+                   
                 </Card>
-                : null}
             </Col>
           </Row>
-        </Card>
-      </div>
-    </>
-  );
+      </Row>
+       :null }
+    </Card>
+  
+    </div>
+   
+)
 }
-export default UserInfo;
 
+export default UserInfo;

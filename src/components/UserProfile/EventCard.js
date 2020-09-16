@@ -50,6 +50,9 @@ export default function EventCard() {
                  <Card.Grid name='event_location' type='vertical'><em>Location of Event:</em><hr/>{event.event_location}</Card.Grid>
                  <Card.Grid name='meeting_spot' type='vertical'><em>Gathering Location:</em><hr/> {event.meeting_spot}</Card.Grid>
                 </Row>
+                <Row>
+                <Card.Grid  name="additional info" type="vertical"><em>Additional Info: </em><hr/>{event.additional_info} </Card.Grid>
+              </Row>
               </Col>
               <Divider />
               <Space>

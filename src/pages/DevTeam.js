@@ -18,24 +18,24 @@ export default function DevTeam() {
         <div>
             <ImageRow/>
             <p id="header-team">GatherNow Team</p>
-            <img class="logo" alt="" src={Logo}/>
+            <img className="logo" alt="" src={Logo}/>
             <p> Here is the GatherNow development team:
             </p>
             <h1>Cassandra Chamberlain</h1>
             <p id="bio-text">View Cassandra's portfolio here ...</p>
-            <img class="headshot" alt="" src={CassPhoto}/>
+            <img className="headshot" alt="" src={CassPhoto}/>
             <h1>Enrique Garcia</h1>
             <p id="bio-text">View Enrique's's portfolio here ...</p>
-            <img class="headshot" alt="" src={EnriquePhoto}/>
+            <img className="headshot" alt="" src={EnriquePhoto}/>
             <h1>Anthony Perez</h1>
             <p id="bio-text">View Anthony's portfolio here ...</p>
-            <img class="headshot" alt="" src={AnthonyPhoto}/>
+            <img className="headshot" alt="" src={AnthonyPhoto}/>
             <h1>Mike Shenk</h1>
             <p id="bio-text">View Mike's portfolio here ...</p>
-            <img class="headshot" alt="" src={MikePhoto}/>
+            <img className="headshot" alt="" src={MikePhoto}/>
             <h1>Hannibal Wyman</h1>
             <p id="bio-text">View Hannibal's portfolio here ...</p>
-            <img class="headshot" alt="" src={HannibalPhoto}/>
+            <img className="headshot" alt="" src={HannibalPhoto}/>
 
             
         </div>

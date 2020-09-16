@@ -130,9 +130,9 @@ html, body {
 /* event viewer styling */
 
 .eventView {
-  background-color:#4b5ba2b4;
-  scrollbar-color: white;
-  scrollbar-base-color: white;
+  background-color:#261cb9b4;
+  color: white;
+  text-emphasis-color: white;
   top: 10%;
   left: 0;
   right: 0;
@@ -140,15 +140,20 @@ html, body {
   width: 50%;
   align-content: center;
   margin: auto;
-  opacity: 0.9;  
+  opacity: .9;
+  border: dashed
 }
 
-.code-box-demo {
-  scrollbar-base-color: white;
+Button {
+  background-color: chartreuse;
+}
+
+/* .code-box-demo {
+  scrollbar-base-color: yellow;
 }
 .config-provider {
   font-size: inherit;
   margin: 16px 0 8px 0;
   scrollbar-base-color: white;
 }
-
+ */

@@ -104,7 +104,7 @@ function LogInForm() {
               <Checkbox>Remember me</Checkbox>
             </Form.Item>
 
-            <Link className="login-form-forgot" href="">
+            <Link to="/CreateAccount" className="login-form-forgot" >
               Forgot password?
             </Link>
           </Form.Item>
@@ -119,7 +119,7 @@ function LogInForm() {
               Log in
             </Button>
             <br></br><br></br>
-            Don't have a GatherNow account? <br></br><Link href="">Register now!</Link>
+            Don't have a GatherNow account? <br></br><Link to="/CreateAccount" >Register now!</Link>
           </Form.Item>
         </Form>
       </div>

@@ -4,6 +4,7 @@ import { NavBar } from "antd-mobile";
 import OverlayVisible from "./../components/NavBarComp/DropDown.js"
 import Logo from './../utils/Images/logo-transparent-notext.png'
 import "../index";
+import UserInfo from "./UserProfile/UserProfile.js";
 
 const Navigation = () => {
   const styles = {
@@ -22,10 +23,10 @@ const Navigation = () => {
     <>
       <NavBar
         className="container nav-logo"
+       key={UserInfo}
         style={styles.navStyle}
         mode="dark"
         fontSize="500px"
-        
         leftContent={[<OverlayVisible />]}
         rightContent={<img src={Logo} alt="GatherNow logo"></img>}
       >

@@ -9,6 +9,7 @@
     justify-content: center;
   }
 
+  
 .size {
   width: 50%;
   display: "flex";
@@ -17,21 +18,24 @@
   margin-bottom: 30px;
   }
 
-  .bioCont {
-    margin-bottom: 165px;
-  }
 
 .bottomMargin {
   margin-bottom: 30px;
 }
 
+/* event cards styling */
 .cardCenter {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
+  display: "flex";
+  justify-content: "center";
+align-items: center;
+flex-basis: auto;
+
 }
 
+.eventCard {
+  
+  border: 2px blue solid;
+}
 
 
 

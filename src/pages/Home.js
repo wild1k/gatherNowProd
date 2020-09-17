@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from "react-router-dom";
 import PickerView from '../components/EventViewer';
 import "../index.css";
 import Logo from './../utils/Images/logo-transparent-notext.png'
@@ -7,26 +8,29 @@ import ImageRow from "../components/ImageRow"
 
 // import Space from '../components/EventCreation/TimeSelector';
 // import OverlayVisible from '../components/NavBarComp/DropDown';
-import "../index";
+import "../index.css";
 
 
 export default function Home() {
     return (
         <>
-         <p id="header-team">Welcome to GatherNow</p>
+       <div className="container">
             <ImageRow/>
             {/* <Select/> */}
             <div>
-            <p className="selectCategory">Select an event category below to get started: </p>
+            <p className="selectCategory">Select an event category below: <br/>OR<br/>
+              Create your own Event! </p>
             <>
                 <PickerView />
                 {/* <Cards></Cards> */}
         
             </>
             </div>
-               <p> Remember to wear a mask. Save lives.</p>
-           <div className="bottomMargin">
+           <div >
+       
             <img className="logo" alt="gatherNow Icon" src={Logo}/>
+             <p> Not already a GatheringNow Member? <Link to="/CreateAccount" >Register now!</Link></p>
+            </div>
             </div>
         </>
     )

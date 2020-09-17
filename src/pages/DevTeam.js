@@ -1,43 +1,52 @@
-
-import React from 'react';
+import React from "react";
 import "../index.css";
-import Logo from './../utils/Images/logo-transparent-notext.png'
-import ImageRow from "../components/ImageRow"
-import CassPhoto from "./../utils/Images/CassHead.jpg"
-import EnriquePhoto from "./../utils/Images/EnriqueHead.jpg"
-import AnthonyPhoto from "./../utils/Images/AnthonyHead.jpg"
-import MikePhoto from "./../utils/Images/Mikeheadshot.jpg"
-import HannibalPhoto from "./../utils/Images/HWhead.png"
+import ImageRow from "../components/ImageRow";
+import CassPhoto from "./../utils/Images/CassHead.jpg";
+// import EnriquePhoto from "./../utils/Images/EnriqueHead.jpg";
+// import AnthonyPhoto from "./../utils/Images/AnthonyHead.jpg";
+// import MikePhoto from "./../utils/Images/Mikeheadshot.jpg";
+import HannibalPhoto from "./../utils/Images/HWhead.png";
 
 import "../index";
 
-
 export default function DevTeam() {
-    return (
-        
-        <div>
-            <ImageRow/>
-            <p id="header-team">GatherNow Team</p>
-            <img className="logo" alt="" src={Logo}/>
-            <p> Here is the GatherNow development team:
-            </p>
-            <h1>Cassandra Chamberlain</h1>
-            <p id="bio-text">View Cassandra's portfolio here ...</p>
-            <img className="headshot" alt="" src={CassPhoto}/>
-            <h1>Enrique Garcia</h1>
-            <p id="bio-text">View Enrique's's portfolio here ...</p>
-            <img className="headshot" alt="" src={EnriquePhoto}/>
-            <h1>Anthony Perez</h1>
-            <p id="bio-text">View Anthony's portfolio here ...</p>
-            <img className="headshot" alt="" src={AnthonyPhoto}/>
-            <h1>Mike Shenk</h1>
-            <p id="bio-text">View Mike's portfolio here ...</p>
-            <img className="headshot" alt="" src={MikePhoto}/>
-            <h1>Hannibal Wyman</h1>
-            <p id="bio-text">View Hannibal's portfolio here ...</p>
-            <img className="headshot" alt="" src={HannibalPhoto}/>
+  return (
+    <div className="container">
+      <ImageRow />
+      <h1> The Development Team:</h1>
+      <h1>
+        <a
+          href="https://www.linkedin.com/in/cassandra-chamberlain-875794166/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          Cassandra Chamberlain
+        </a>
+      </h1>
+      <img className="headshot" alt="headshot Cassandra" src={CassPhoto} />
+{/* 
+      <h1>
+        <a>Enrique Garcia</a>
+      </h1>
 
-            
-        </div>
-    );
-};
+      <img className="headshot" alt="headshot Enrique" src={EnriquePhoto} />
+
+      <h1>
+        <a>Anthony Perez</a>
+      </h1>
+
+      <img className="headshot" alt="headshot Anthony" src={AnthonyPhoto} />
+      <h1>
+        <a>Mike Shenk</a>
+      </h1>
+
+      <img className="headshot" alt="headshot Mike" src={MikePhoto} /> */}
+      <h1>
+        {/* <a>Hannibal Wyman</a> */}
+      </h1>
+
+      <img className="headshot" alt="headshot Hannibal" src={HannibalPhoto} />
+    </div>
+  );
+}

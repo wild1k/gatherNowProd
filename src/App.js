@@ -10,13 +10,13 @@ import CreateEvent from './pages/CreateEvent';
 import Chat from './pages/Chat';
 import DevTeam from './pages/DevTeam';
 import LogOut from './pages/LogOut';
-import {WhiteSpace} from 'antd-mobile';
+
 
 import 'antd-mobile/dist/antd-mobile.css';
 import 'antd-mobile/lib/date-picker/style/css';
 import './App.css';
 import UserInfo from './components/UserProfile/UserProfile';
-
+import "./index.css";
 
 
 
@@ -33,6 +33,7 @@ class App extends Component {
         <div key={UserInfo}> 
           <BrowserRouter>
           <Navigation/>
+         
           <Switch>
             <Route exact path="/CreateAccount" component={CreateAccount}/>
             <Route exact path="/" component={Home}/>
@@ -43,7 +44,7 @@ class App extends Component {
             <Route exact path="/DevTeam" component={DevTeam}/>
             <Route exact path="/LogOut" component={LogOut}/>
           </Switch>
-          <WhiteSpace/>
+      
           <Footer/>
           </BrowserRouter>
         </div>

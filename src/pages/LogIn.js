@@ -9,7 +9,7 @@ export default function LogIn() {
   return (
     <>
       <ImageRow/>
-      <p id="header-team">Sign In</p>
+     <p></p>
       <LogInForm />
 
     </>

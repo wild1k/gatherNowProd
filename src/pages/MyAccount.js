@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import {Row, Col} from "antd";
 import EventCard from "./../components/UserProfile/EventCard";
 import "../index";
 import API from "../utils/API"
@@ -17,13 +18,30 @@ function MyAccount() {
   return (
     <>
   <ImageRow/>
-      {currentUser ? <p id="header-team"> Welcome {currentUser.first_name}! Here are your events coming up:</p> : null}
+  <Row>
+    <Col lg={10}>
+          {currentUser ? <p id="header-team"> Welcome {currentUser.first_name}! Here are your events coming up:</p> : null}
 
       <UserInfo currentUser={currentUser} />
       {/* <Button /> */}
 
+<Row>
+<Col>
 
-      <EventCard />
+  <EventCard />
+</Col>
+
+
+</Row>
+      
+    
+    
+    
+    </Col>
+
+
+  </Row>
+
     </>
   );
 }

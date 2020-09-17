@@ -7,7 +7,7 @@ import Drinks from './../utils/Images/drinks.jpg'
 
 const ImageRow = () =>{
     return (
-        <div>
+        <div className="bottomMargin">
         <img className="main-img" alt="kayaking" src={Kayaking}/>
         <img className="main-img" alt="food" src={Food}/>
         <img className="main-img" alt="bonfire" src={Bonfire}/>

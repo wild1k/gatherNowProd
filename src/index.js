@@ -3,13 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import UserInfo from './components/UserProfile/UserProfile';
+
 
 
 
 
 ReactDOM.render(
-  <App key={UserInfo}/>,
+ <App/>,
 document.getElementById('root', 'Container')
 );
 

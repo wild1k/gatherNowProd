@@ -8,10 +8,12 @@ import ImageRow from "../components/ImageRow";
 
 export default function CreateEvent() {
   return (
-    <div>
+   <>
       <ImageRow/>
-      <p id="header-team">Create an event</p>;
-      <EventForm />
-    </div>
+     
+       <EventForm /> 
+      
+     
+  </>
   )
 }

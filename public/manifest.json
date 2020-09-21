@@ -2,8 +2,10 @@
   "short_name": "GatherNow",
   "name": "Impromtu Adventure",
   "plugins": [
-      ["import", { "libraryName": "antd-mobile", "style": "true" }]
-    ],
+      ["import", { "libraryName": "antd-mobile", "style": "true" },
+    { "libraryName": "antd", "style": "css" }
+    ]],
+
     "icons": [
       {
         "src": "favicon.ico",

@@ -1,10 +1,15 @@
 import React, { useState, useEffect } from "react";
-import {Row, Col} from "antd";
+
 import EventCard from "./../components/UserProfile/EventCard";
 import "../index";
 import API from "../utils/API"
 import UserInfo from "../components/UserProfile/UserProfile";
 import ImageRow from "../components/ImageRow"
+
+
+
+
+
 
 function MyAccount() {
   const [currentUser, setCurrentUser] = useState({});
@@ -15,33 +20,28 @@ function MyAccount() {
     });
   }, []);
 
+  const [userEvent, setUserEvent] = useState([]);
+  useEffect(() => {
+    API.getUserEvent().then((res) => {
+      setUserEvent(res.data);
+      console.log(res.data);
+    });
+  }, []);
   return (
     <>
   <ImageRow/>
-  <Row>
-    <Col lg={10}>
-          {currentUser ? <p id="header-team"> Welcome {currentUser.first_name}! Here are your events coming up:</p> : null}
+  <div className="center">
+
+          {currentUser ? <p id="header-team">Here are your events coming up:</p> : null}
 
       <UserInfo currentUser={currentUser} />
       {/* <Button /> */}
 
-<Row>
-<Col>
 
-  <EventCard />
-</Col>
+ {userEvent ?  <EventCard userEvent={userEvent}/> : null}
+ 
 
-
-</Row>
-      
-    
-    
-    
-    </Col>
-
-
-  </Row>
-
+</div>
     </>
   );
 }

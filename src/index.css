@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 body {
   margin-bottom: 900px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -152,19 +154,12 @@ html, body {
   align-content: center;
   margin: auto;
   opacity: .9;
-  border: dashed
+  border: dashed;
 }
 
-Button {
-  background-color: chartreuse;
+
+center {
+  Margin-Left: 100px;
 }
 
-/* .code-box-demo {
-  scrollbar-base-color: yellow;
-}
-.config-provider {
-  font-size: inherit;
-  margin: 16px 0 8px 0;
-  scrollbar-base-color: white;
-}
- */
+

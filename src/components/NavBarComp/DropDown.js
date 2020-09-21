@@ -59,7 +59,7 @@ class OverlayVisible extends React.Component {
           className="ant-dropdown-link dropdown"
           onClick={(e) => e.preventDefault()}
         >
-          My Account <DownOutlined />
+          Let the Adventure Begin!  <DownOutlined />
         </Link>
       </Dropdown>
     );

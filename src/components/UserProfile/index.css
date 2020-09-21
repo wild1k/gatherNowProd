@@ -1,3 +1,5 @@
+@import '~antd/dist/antd.css';
+
 /* user profile information */
 .userStyle {
 
@@ -37,7 +39,14 @@ flex-basis: auto;
   border: 2px blue solid;
 }
 
-
+.container {
+  height: 100%;
+  position: 'relative';
+  width: '100%';
+  background-color: '#EE5407';
+  justify-content: 'center';
+  align-items: 'center';
+}
 
 
 

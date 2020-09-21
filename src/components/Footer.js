@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="content-inside">
-        &#169; GatherNow by Impromptu Adventures
+     
         <br />
         #SaveLives | 2020 | #WearAMask
         <br />

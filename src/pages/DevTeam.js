@@ -43,7 +43,8 @@ export default function DevTeam() {
 
       <img className="headshot" alt="headshot Mike" src={MikePhoto} /> */}
       <h1>
-        {/* <a>Hannibal Wyman</a> */}
+         <a href="https://www.linkedin.com/in/hannibal-wyman-17068926/"  target="_blank"
+          rel="noopener noreferrer">Hannibal Wyman</a>
       </h1>
 
       <img className="headshot" alt="headshot Hannibal" src={HannibalPhoto} />

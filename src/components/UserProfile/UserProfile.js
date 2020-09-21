@@ -3,10 +3,21 @@ import Avatar from "./ProfilePic";
 import { Descriptions, Card, Row, Col } from "antd";
 import "./index.css";
 
+
+
+
+const style = {
+  MyAccount: {
+    justifyContent: 'center',
+    alignItems: "center",
+    display: 'flex',
+
+  }
+}
 function UserInfo(props) {
   return (
-    <div>
-      <Card>
+    <div className="container" style={style.MyAccount}>
+      <Card key={UserInfo.currentUser}>
         {props.currentUser ? (
           <Row>
             <Col>

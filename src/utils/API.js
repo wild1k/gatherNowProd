@@ -21,6 +21,9 @@ const API = {
    getUserEvent:function(userData){
     return axios.get(`${urlPrefix}/api/events/`, userData);
 },
+deleteEventCard:function(event, id){
+    return axios.delete(`${urlPrefix}/api/events/delete/:id`,{withCredentials:true});
+},
 };
 
 

@@ -18,10 +18,10 @@ export default function Home() {
         {/* <Select/> */}
         <div>
           <p className="selectCategory">
-            Select an event category below: <br />
+            Search an Event category below: <br />
             OR
             <br />
-            Create your own Event!{" "}
+            Create your own Event in <Link to='/MyAccount'>My Account Page</Link>
           </p>
           <>
             <PickerView />

@@ -29,11 +29,7 @@ const styles = {
 //     </span>
 //   );
 // }
-// function btndelete = () => {
-//   deleteUserEvent: function(id) {
-//     return API.delete('/delete/:id');
-//   }
-// }
+
 //  const DeleteButton = ({id}) => (
 //    <span
 //    className="delete-btn"
@@ -44,7 +40,7 @@ const styles = {
 //    </span>
 //  )
 
-export default function EventCard() {
+export default function EventCard(props) {
   const [userEvent, setUserEvent] = useState([]);
   useEffect(() => {
     API.getUserEvent().then((res) => {
@@ -53,7 +49,11 @@ export default function EventCard() {
     });
   }, []);
 
-
+// function DeleteButton => () = {
+//   deleteEventCard: function(EventCard.id) {
+//     return API.delete('/delete/:id');
+//   }
+// }
 
 
   
@@ -63,10 +63,10 @@ export default function EventCard() {
     //    e.event_category
     // }
 
-    <div>
+    <div >
       {userEvent.map((event) => {
         return (
-          <Card key={event.id} style={styles.formBorder} className="align">
+          <Card key={event.id} style={styles.formBorder} >
             <h2 name="event_name" title={event.event_name}>
               <em>
                 <strong>Event: </strong>
@@ -103,7 +103,7 @@ export default function EventCard() {
             <Space>
               <Button onClick={EventCard.id}>Edit Event</Button>
               <Button>Chat</Button>
-              {/* <DeleteBtn onClick={() => this.deleteMusic(props.EventCard._id)} /> */}
+              {/* <Button onClick={(e) => this.deleteEvent(EventCard, id, e)}>Delete Button</Button> */}
             </Space>
           </Card>
         );

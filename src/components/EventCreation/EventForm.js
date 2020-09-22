@@ -125,10 +125,18 @@ return (
               type="primary"
               htmlType="submit"
               className="login-form-button"
-          onClick={handleCreateEventFormSubmit}
+              onClick={handleCreateEventFormSubmit}
             >
               Post Your Event
             </Button>
+            {/* <Button
+              type="primary"
+              htmlType="Edit"
+              className="login-form-button"
+              // onClick={handleEditEventForm}
+            >
+             Edit Your Event
+            </Button> */}
           </Form.Item>
         </Form>
     </div>

@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Switch} from 'react-router-dom';
 import Home from './pages/Home';
 import LogIn from './pages/LogIn';
 import CreateAccount from './pages/CreateAccount';
-import NavBar from './components/NavBar';
+import Navigation from './components/Navigation';
 import Footer from './components/Footer';
 import MyAccount from './pages/MyAccount'
 import CreateEvent from './pages/CreateEvent';
@@ -32,7 +32,7 @@ class App extends Component {
      
         <div> 
           <BrowserRouter>
-          <NavBar/>
+          <Navigation/>
           <Switch>
             <Route exact path="/CreateAccount" component={CreateAccount}/>
             <Route exact path="/" component={Home}/>

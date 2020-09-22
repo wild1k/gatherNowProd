@@ -1,7 +1,7 @@
 import React from "react";
 // import {NavLink} from "react-router-dom";
 import { NavBar } from "antd-mobile";
-import OverlayVisible from "./../components/NavBarComp/DropDown.js"
+import OverlayVisible from "./NavBarComp/DropDown.js"
 import Logo from './../utils/Images/logo-transparent-notext.png'
 import "../index";
 import UserInfo from "./UserProfile/UserProfile.js";
@@ -27,10 +27,9 @@ const Navigation = () => {
         style={styles.navStyle}
         mode="dark"
         fontSize="500px"
-        leftContent={[<OverlayVisible />]}
         rightContent={<img src={Logo} alt="GatherNow logo"></img>}
       >
-
+<OverlayVisible/>
       </NavBar>
 
     </>

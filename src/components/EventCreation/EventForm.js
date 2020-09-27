@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState} from 'react';
 import { useHistory } from "react-router-dom";
 import { Form, Input, Button } from "antd";
 // import { UserOutlined} from '@ant-design/icons';
 import TextArea from "antd/lib/input/TextArea";
-import SwitchablePicker from './TimeSelector'
 import API from "../../utils/API"
 import "../../index";
 import { WhiteSpace } from "antd-mobile";
+import TimeSelector from './TimeSelector';
 
 
 
@@ -49,7 +49,8 @@ const styles = {
         console.log(res.data)
         history.push("/MyAccount");
         setCreateEventFormData({
-          time: "",
+          start_at: "",
+          end_at: "",
           event_category: "",
           event_name: "",
           event_location: "",
@@ -67,10 +68,18 @@ return (
 
 
     <div className="container align">
+      {/* <button onClick={()=>showEventForm(true)}>Add Event</button> */}
         <Form className="site-input-group-wrapper" style={styles.formBorder}>
           <p>* Create your event </p>
-           <SwitchablePicker/>
+          <TimeSelector/>
            <WhiteSpace></WhiteSpace>
+     <Form.Item>
+            <Input  placeholder="Start Time"
+          name="time"
+          value={CreateEventFormData.start_at}
+          onChange={CreateEventInputChange} 
+            />
+          </Form.Item>  
           <Form.Item>
             <Input  placeholder="Event Category"
           name="event_category"

@@ -13,7 +13,7 @@ import EventCard from "../components/UserProfile/EventCard";
 export default function Home() {
   return (
     <>
-      <div className="container">
+      <div className="Home">
         <ImageRow />
         {/* <Select/> */}
         <div>

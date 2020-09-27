@@ -1,28 +1,19 @@
 @import '~antd/dist/antd.css';
 
-body {
-  margin-bottom: 900px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: white;
-}
 
 /* making the logo on the home page off the bottom */
 .bottomMargin {
   margin-bottom: 500px;
 }
 
-.container {
-  height: 100%;
+/* .container {
+  height: 100vh;
   position: 'relative';
   width: '100%';
   background-color: '#EE5407';
   justify-content: 'center';
   align-items: 'center';
-}
+} */
 
 /* making a special container page size for the log out page */
 .pageSize {
@@ -46,6 +37,10 @@ code {
 .site-input-group-wrapper {
 width: 700px;
 
+}
+
+.MyAccount {
+  height: 120vh;
 }
 
 #header-team {

@@ -1,17 +1,17 @@
-import React from "react";
-import LogInForm from "../components/LogInForm";
-import ImageRow from "../components/ImageRow"
+// import React from "react";
+// import LogInForm from "../components/LogInForm";
+// import ImageRow from "../components/ImageRow"
 
 
-import '../index';
+// import '../index';
 
-export default function LogIn() {
-  return (
-    <>
-      <ImageRow/>
-     <p></p>
-      <LogInForm />
+// export default function LogIn() {
+//   return (
+//     <>
+//       <ImageRow/>
+//      <p></p>
+//       {/* <LogInForm /> */}
 
-    </>
-  )
-}
+//     </>
+//   )
+// }

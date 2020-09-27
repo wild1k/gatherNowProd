@@ -25,43 +25,46 @@ class OverlayVisible extends React.Component {
     const menu = (
       <Menu onClick={this.handleMenuClick}>
         <Menu.Item key="1">
-          <NavLink to="/LogIn">Log In</NavLink>
-        </Menu.Item>
-        <Menu.Item key="2">
           <NavLink to="/">Home</NavLink>
         </Menu.Item>
-        {/* <Menu.Item key="2"><NavLink to="/CreateAccount">Sign Up</NavLink></Menu.Item> */}
-        <Menu.Item key="3">
+        <Menu.Item key="2">
           <NavLink to="/MyAccount">My Account</NavLink>
         </Menu.Item>
-        <Menu.Item key="4">
+        <Menu.Item key="3">
           <NavLink to="/CreateEvent">Create New Event</NavLink>
         </Menu.Item>
         {/* <Menu.Item key="6"><NavLink to="/Chat">Chat</NavLink></Menu.Item> */}
-        <Menu.Item key="5">
+        <Menu.Item key="4">
           <NavLink to="/DevTeam">Development Team</NavLink>
         </Menu.Item>
-        <Menu.Item key="6">
-          <NavLink to="/LogOut">Log Out</NavLink>
+        <Menu.Item key="5">
+          <NavLink to="/Logout">Log Out</NavLink>
         </Menu.Item>
       </Menu>
-    );
+    )
     return (
+      <>
       <Dropdown
-        key={menu.key}
-        overlay={menu}
-        onVisibleChange={this.handleVisibleChange}
-        visible={this.state.visible}
+      overlay={menu}
+      onVisibleChange={this.handleVisibleChange}
+      visible={this.state.visible}
+
+    >
+    
+      <Link
+        to="/MyAccount"
+        className="ant-dropdown-link dropdown"
+        onClick={(e) => e.preventDefault()}
       >
-        <Link
-          to="/MyAccount"
-          className="ant-dropdown-link dropdown"
-          onClick={(e) => e.preventDefault()}
-        >
-          Let the Adventure Begin!  <DownOutlined />
-        </Link>
-      </Dropdown>
-    );
+        <>
+        <Menu/>
+        Let the Adventure Begin!  <DownOutlined menu={menu}/>
+        </>
+      </Link>
+    </Dropdown>
+    </>
+  )
+    
   }
 }
 

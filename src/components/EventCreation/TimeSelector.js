@@ -1,28 +1,28 @@
 import React, { useState } from 'react';
-import { DatePicker, TimePicker, Select, Space } from 'antd';
+import { Select, Space, TimePicker} from 'antd';
 
 import 'antd/dist/antd.css';
 
 
 const { Option } = Select;
 
-function PickerWithTime({ type, onChange }) {
-   if (type === 'time') return <TimePicker onChange={onChange} />;
-   return <DatePicker picker={type} onChange={onChange} />;
- }
+function PickerWithType({ type, onChange }) {
+  if (type === 'time') return <TimePicker onChange={onChange} />;
+  return <PickerWithType picker={type} onChange={onChange} />;
+}
 
 
 
-
-export default function SwitchablePicker() {
+export default function TimeSelector() {
   const [type, setType] = useState('time');
   return (
-
+  <div>
     <Space>
       <Select value={type} onChange={setType}>
         <Option value="time">Time</Option>
       </Select>
-      <PickerWithTime type={type} onChange={value => console.log(value)} />
+      <PickerWithType type={type} onChange={value => console.log(value)} />
     </Space>
+    </div>
   );
 }

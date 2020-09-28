@@ -23,17 +23,17 @@ import MyAccount from '../pages/MyAccount';
 // import React from 'react'
 
 export default function LoginForm(props) {
-  const [currentUser, setCurrentUser] = useState({});
-  //  const [userEvent, setUserEvent] = useState([]);
-  // const history = useHistory();
+  // const [currentUser, setCurrentUser] = useState({});
+  // //  const [userEvent, setUserEvent] = useState([]);
+  // // const history = useHistory();
  
-  useEffect(() => {
-    API.getCurrentUser().then((res) => {
-      // console.log(res.data.user);
-      setCurrentUser(res.data.user); 
-      // setUserEvent(res.data);
-    });
-  }, []);
+  // useEffect(() => {
+  //   API.getCurrentUser().then((res) => {
+  //     // console.log(res.data.user);
+  //     setCurrentUser(res.data.user); 
+  //     // setUserEvent(res.data);
+  //   });
+  // }, []);
 
 
 
@@ -42,10 +42,11 @@ export default function LoginForm(props) {
      
         <form onSubmit={props.handleSubmit}>
             <label>email:</label>
-            <input type="text" name="email" onChange={props.handleChange}value={LoginForm.email}/>
+            <input type="text" name="email" onChange={props.handleChange} value={LoginForm.email}/>
             <label>password:</label>
-            <input type="password" name="password" onChange={props.handleChange}value={props.password}/>
-            <button onClick={()=> setCurrentUser(<MyAccount currentUser={currentUser} />)}>My Account</button> 
+            <input type="password" name="password" onChange={props.handleChange} value={props.password}/>
+            <button>Log In</button>
+            {/* <button onClick={()=> setCurrentUser(<MyAccount currentUser={currentUser} />)}>My Account</button>  */}
         </form>
    
         </>

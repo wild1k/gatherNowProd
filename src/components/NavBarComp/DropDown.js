@@ -58,7 +58,7 @@ class OverlayVisible extends React.Component {
       >
         <>
         <Menu/>
-        Let the Adventure Begin!  <DownOutlined menu={menu}/>
+       Get Started! <DownOutlined menu={menu}/>
         </>
       </Link>
     </Dropdown>

@@ -82,8 +82,7 @@ function App() {
     })
 }
 
-  const handleLoginFormSubmit = e => {
-    e.preventDefault();
+  const handleLoginFormSubmit = () => {
     API.login(loginFormData).then(res => {
       console.log(res.data);
       setLoginFormData({
@@ -116,7 +115,7 @@ function App() {
             </Route>
             <Route path="/DevTeam"><DevTeam currentUser={currentUser}/>
             </Route>
-            <Route path="/logout" ><LogOut currentUser={currentUser}  />
+            <Route path="/logout"><LogOut currentUser={currentUser}  />
             </Route>
           </Switch>
           <Footer/>

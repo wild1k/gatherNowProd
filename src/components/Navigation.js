@@ -47,14 +47,15 @@ export default function Navigation(props) {
         style={styles.navStyle}
         mode="dark"
         fontSize="500px"
-        leftContent={<OverlayVisible><span>Welcome, {props.first_name}</span></OverlayVisible>}
-        rightContent={<img src={Logo} alt="GatherNow logo"></img>}
+        leftContent={props.currentUser?<button onClick={props.logout} ><Link to="/logout">Log Out</Link></button>:null}
+        rightContent={props.currentUser?<OverlayVisible/>:<img src={Logo} alt="GatherNow logo"></img>}
         // textcontent={<LoginForm handleSubmit={props.loginSubmit} onChange={props.loginInputChange} value={props.loginFormData.email}/>}
-        content={<Link to="/LogOut" onClick={props.logout}>Logout</Link>}
+        // content={<Link to="/LogOut" onClick={props.logout}>Logout</Link>}
       >
+        {/* {props.currentUser?:<p>Welcome</p>} */}
       
- {props.currentUser ?<button onClick={()=> setCurrentUser(<MyAccount currentUser={currentUser} to="/MyAccount"/>)}>Create Event</button>:null}
- <LogInForm handleSubmit = {props.loginSubmit} handleChange={props.inputChange} formData={props.logInFormData}/>
+ {/* {props.currentUser ?<button onClick={()=> setCurrentUser(<MyAccount currentUser={currentUser} to="/MyAccount"/>)}>Create Event</button>:null} */}
+ {props.currentUser?<span>Welcome, {props.currentUser.first_name}</span>:<LogInForm handleSubmit = {props.loginSubmit} handleChange={props.inputChange} formData={props.logInFormData}/>}
       </NavBar>
    
       </span>

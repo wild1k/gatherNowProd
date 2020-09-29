@@ -18,11 +18,11 @@ const API = {
         return axios.post(`${urlPrefix}/api/users/createAccount`, userData, { withCredentials: true });
     },
     //Event Forms and Cards
-   CreateEvents:function(userData){
-       return axios.post(`${urlPrefix}/api/events/CreateEvents`, userData, { withCredentials: true } );
+   createEvents:function(userData){
+       return axios.post(`${urlPrefix}/api/events/createEvents`, userData, { withCredentials: true } );
    },
    getUserEvent:function(userData){
-    return axios.get(`${urlPrefix}/api/events/`, userData);
+    return axios.get(`${urlPrefix}/api/events/:id`, userData);
 },
    deleteEventCard:function(event, id){
     return axios.delete(`${urlPrefix}/api/events/delete/:id`,{withCredentials:true});

@@ -43,7 +43,7 @@ function SignUpForm() {
     e.preventDefault();
     API.createAccount(SignUpFormData).then(res => {
       console.log(res.data)
-      history.push("/LogIn");
+      history.push("/");
       setSignUpFormData({
         first_name: "",
         last_name: "",

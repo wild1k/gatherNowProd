@@ -6,7 +6,7 @@ import TextArea from "antd/lib/input/TextArea";
 import API from "../../utils/API"
 import "../../index";
 import { WhiteSpace } from "antd-mobile";
-import TimeSelector from './TimeSelector';
+
 
 
 
@@ -21,10 +21,10 @@ const styles = {
   color: 'red',
 }}
 
-  function CreateEvent() {
+  function CreateEvent(props) {
     let history = useHistory();
-    const [CreateEventFormData, setCreateEventFormData] = useState({
-      time: "",
+    const [EventFormData, setEventFormData] = useState({
+      start_time: '',
       event_category: "",
       event_name: "",
       event_location: "",
@@ -37,19 +37,19 @@ const styles = {
 
     const CreateEventInputChange = event => {
       const { name, value } = event.target;
-      setCreateEventFormData({
-        ...CreateEventFormData,
+      setEventFormData({
+        ...EventFormData,
         [name]: value
       })
     }
 
-    const handleCreateEventFormSubmit = e => {
+    const handleEventFormSubmit = e => {
       e.preventDefault();
-      API.CreateEvents(CreateEventFormData).then(res => {
+      API.createEvents(EventFormData).then(res => {
         console.log(res.data)
-        history.push("/MyAccount");
-        setCreateEventFormData({
-          start_at: "",
+        history.push("/");
+        setEventFormData({
+          start_time: "",
           end_at: "",
           event_category: "",
           event_name: "",
@@ -60,7 +60,7 @@ const styles = {
           additional_info: ""
         })
       }).catch(err => {
-        alert("Post Create Failed")
+        alert("Event Creation Failed")
       })}
     
 
@@ -69,72 +69,72 @@ return (
 
     <div className="container align">
       {/* <button onClick={()=>showEventForm(true)}>Add Event</button> */}
-        <Form className="site-input-group-wrapper" style={styles.formBorder}>
+        <Form className="site-input-group-wrapper" style={styles.formBorder} value={EventFormData} onSubmit={props.handleEventFormSubmit}>
           <p>* Create your event </p>
-          <TimeSelector/>
            <WhiteSpace></WhiteSpace>
      <Form.Item>
             <Input  placeholder="Start Time"
-          name="time"
-          value={CreateEventFormData.start_at}
+          name="start_at"
+          type="time"
+          value={EventFormData.start_time.Input}
           onChange={CreateEventInputChange} 
             />
           </Form.Item>  
           <Form.Item>
             <Input  placeholder="Event Category"
           name="event_category"
-          value={CreateEventFormData.event_category}
+          value={EventFormData.event_category}
           onChange={CreateEventInputChange} 
             />
           </Form.Item>
           <Form.Item>
             <Input  placeholder="Event Name"
           name="event_name"
-          value={CreateEventFormData.event_name}
+          value={EventFormData.event_name}
           onChange={CreateEventInputChange}  
             />
           </Form.Item>
           <Form.Item>
            <Input  placeholder="Event Location"
           name="event_location"
-          value={CreateEventFormData.event_location}
+          value={EventFormData.event_location}
           onChange={CreateEventInputChange}  
            />
           </Form.Item>
           <Form.Item>
            <Input   placeholder="Meeting Spot"
           name="meeting_spot"
-          value={CreateEventFormData.meeting_spot}
+          value={EventFormData.meeting_spot}
           onChange={CreateEventInputChange}  
            />
           </Form.Item>
           <Form.Item>
             <Input maxLength={5} placeholder="Maximum number of attendees"
           name="num_of_attendees"
-          value={CreateEventFormData.num_of_attendees}
+          value={EventFormData.num_of_attendees}
           onChange={CreateEventInputChange}  
             />
           </Form.Item>
           <Form.Item>
             <Input maxLength={4} placeholder="Min age requirement"
           name="maxLength"
-          value={CreateEventFormData.maxLength}
+          value={EventFormData.maxLength}
           onChange={CreateEventInputChange}  
             />
           </Form.Item>
           <Form.Item>
             <TextArea rows={4} maxLength={200} placeholder="Additional info"
           name="additional_info"
-          value={CreateEventFormData.additional_info}
+          value={EventFormData.additional_info}
           onChange={CreateEventInputChange}  
             />
           </Form.Item>
-          <Form.Item>
+        
             <Button
               type="primary"
               htmlType="submit"
-              className="login-form-button"
-              onClick={handleCreateEventFormSubmit}
+              className="event-form-button"
+              onClick={handleEventFormSubmit}
             >
               Post Your Event
             </Button>
@@ -146,7 +146,7 @@ return (
             >
              Edit Your Event
             </Button> */}
-          </Form.Item>
+        
         </Form>
     </div>
   )}; 

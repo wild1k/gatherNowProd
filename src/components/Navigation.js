@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useEffect, useState} from "react";
 // import {NavLink} from "react-router-dom";
 import { NavBar } from "antd-mobile";
 import OverlayVisible from "./NavBarComp/DropDown.js"
@@ -6,7 +6,7 @@ import Logo from './../utils/Images/logo-transparent-notext.png'
 import "../index";
 import API from '../utils/API';
 // import UserInfo from "./UserProfile/UserProfile.js";
-import MyAccount from '../pages/MyAccount';
+
 
 import LogInForm from '../components/LogInForm';
 
@@ -42,7 +42,6 @@ export default function Navigation(props) {
      
           <span> 
       <NavBar
-   
         className="container nav-logo Navigation"
         style={styles.navStyle}
         mode="dark"

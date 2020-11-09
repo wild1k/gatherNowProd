@@ -36,8 +36,8 @@ function App() {
     e.preventDefault();
     API.createAccount(SignUpFormData).then(res => {
       console.log(res.data)
-      history.push("/createAccount");
       setSignUpFormData({
+        id: "",
         first_name: "",
         last_name: "",
         age: "",
@@ -79,6 +79,7 @@ function App() {
   const logout = ()=>{
     API.logout().then(res=>{
       setCurrentUser();
+      alert('You have logged out of your account, please log in to ');
     })
 }
 

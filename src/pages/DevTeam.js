@@ -27,7 +27,9 @@ export default function DevTeam() {
       <img className="headshot" alt="headshot Cassandra" src={CassPhoto} />
 
       <h1>
-        <a  href="https://github.com/rickyg218"
+
+        <a   href="https://www.linkedin.com/in/enrique-garcia-30353715a/"
+
           target="_blank"
           rel="noopener noreferrer">Enrique Garcia</a>
       </h1>
@@ -35,7 +37,8 @@ export default function DevTeam() {
       <img className="headshot" alt="headshot Enrique" src={EnriquePhoto} />
 
       <h1>
-        <a  href="https://github.com/mlshenk"
+
+        <a    href="https://github.com/ajper05/"
           target="_blank"
           rel="noopener noreferrer">Anthony Perez</a>
       </h1>

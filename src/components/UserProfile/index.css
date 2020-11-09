@@ -2,7 +2,9 @@
 
 /* user profile information */
 .userStyle {
-
+    display: "flex";
+    justify-content: "center";
+    align-items: center;
     width: 20%;
   }
 
